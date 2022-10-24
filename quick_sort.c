@@ -14,7 +14,7 @@ void quick_sort(int vetor[], int tamanho){
             while(vetor[b]>x) b--;
 
             if(a < b){
-                troca(&a, &b);
+                troca(&vetor[a], &vetor[b]);
                 a++;
                 b--;
             }
