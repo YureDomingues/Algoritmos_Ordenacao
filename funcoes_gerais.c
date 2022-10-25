@@ -15,7 +15,7 @@ void imprimir_vetor(int vetor[], int n){
     printf("\n");
 }
 
-void gerar_vetores_aleatorios(int qtd_vetores, int tamanho, int matriz[qtd_vetores][tamanho]){
+void gerar_vetores_aleatorios(int qtd_vetores, int tamanho, int **matriz){
     srand(time(NULL));
 
     for(int i=0; i< tamanho; i++){
