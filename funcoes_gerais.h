@@ -5,6 +5,6 @@
 
 void troca(int *num1, int *num2);
 void imprimir_vetor(int vetor[], int n);
-void gerar_numeros_aleatorios(int vetor[], int tamanho);
+void gerar_vetores_aleatorios(int qtd_vetores, int tamanho, int matriz[qtd_vetores][tamanho]);
 
 #endif
