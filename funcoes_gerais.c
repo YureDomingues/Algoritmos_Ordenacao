@@ -11,7 +11,12 @@ void troca(int *num1, int *num2){
 void imprimir_vetor(int vetor[], int n){
     for(int i=0; i<n; i++){
         printf("[%d]", vetor[i]);
+        if(i==9){
+            printf("...");
+            i = n-10;
+        }
     }
+
     printf("\n");
 }
 
