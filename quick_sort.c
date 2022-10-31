@@ -21,7 +21,6 @@ void quick_sort(int vetor[], int tamanho){
 
         }while(a <= b);
 
-        /*troca pivô*/
         vetor[0] = vetor[b];
         vetor[b] = x;
 
