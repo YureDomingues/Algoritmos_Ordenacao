@@ -19,7 +19,7 @@ Este é um relatório que visa comparar o desempenho entre alguns algoritmos de 
 
 ## Tabelas
 
-## Todos os resultados
+<h3> Todos os resultados </h3>
 
 |Teste| Nº Elementos | Bubble It  | Bubble Rec |  Merge   | Quick                                                |
 |-----| ------------ | -----------| ---------- | -------- | --------- |
@@ -39,7 +39,7 @@ Este é um relatório que visa comparar o desempenho entre alguns algoritmos de 
 | 14  | 10.000.000   | > 30 min   | > 30 min   | 2,180s   | 115,975s  |
 | 15  | 10.000.000   | > 30 min   | > 30 min   | 2,174s   | 116,030s  |
 
-### Médias de Tempo
+<h3> Médias de Tempo </h3>
 
 | Nº Elementos | Bubble It  | Bubble Rec |  Merge   | Quick                                                |
 | ------------ | -----------| ---------- | -------- | ------    |
@@ -52,17 +52,18 @@ Este é um relatório que visa comparar o desempenho entre alguns algoritmos de 
 
 ## Análise de resultados
 
-#### Bubble Sort Recursivo comparado com Bubble Sort Iterativo
+<h4> Bubble Sort Recursivo comparado com Bubble Sort Iterativo </h4>
 
-Em todos os casos testados o tempo de ordenação do o bubble recursivo ordenou o vetor em tempo igual ou inferior, tentendo a ser mais rápido que o outro quando maior o tamanho de elementos nele.
+Em todos os casos testados o tempo de ordenação do o bubble recursivo foi igual ou inferior ao iterativo, com o recursivo sendo mais rápido que o outro para N cada vez maiores.
+Houve problema na ordenação de vetores com mais de 100.000 elementos, seja pelo tempo ser excessivamente grande (maior que 30 minutos) ou por ocorrer o erro "segmentation fault (core dumped)", que acontece por conta de acessos indevidos à memória. Provavelmente esse erro foi causado devido a pilha de execução de funções que o Bubble Sort Recursivo cria para ordenação desse "grande" vetor.
 
-#### Merge Sort comparado com Quick Sort
+<h4> Merge Sort comparado com Quick Sort </h4>
 
-Na ordenação de vetores com N <= 100.000 o Merge Sort teve desempenho igual ou inferior ao Quick Sort, Porém quando nos dois últimos testes onde a quantidade de elementos foi de 1 milhão e 10 milhões o Mege ganhou em desempenho com boa folga, sendo aproximadamente 6x mais veloz que o Quick para N no primeiro caso e mais 50x no segundo.
+Na ordenação de vetores com N <= 100.000 o Merge Sort teve desempenho igual ou inferior ao Quick Sort, porém quando, nos dois últimos testes, a quantidade de elementos foi de 1 milhão e 10 milhões o Merge ganhou no tempo de ordenação com boa vantagem, sendo aproximadamente 6x mais veloz que o Quick no primeiro caso e mais 50x no segundo.
 
-#### Bubble Sort mais veloz comparado ao Merge Sort e Quick Sort
+<h4> Bubble Sort mais veloz comparado ao Merge Sort e Quick Sort </h4>
 
-O Bubble Sort perdeu em todos os casos de teste para os outros dois algoritmos. Isso já era experado pois a complexidade do Bubble Sort é O(N²), já a do Quick Sort é O(N.logN) no melhor/médio caso e O(n²) no pior, já o Merge Sort é O(N.logN) para todos os casos.
+O Bubble Sort perdeu em todos os casos de teste para os outros dois algoritmos. Isso já era experado pois a complexidade do Bubble Sort é O(N²), a do Quick Sort é O(N.logN) no melhor e médio caso, e O(n²) no pior e o Merge Sort é O(N.logN) para todos os casos.
 De forma bem resumida a complexidade "O-grande" expressa o quanto tempo computacional de execução de um algoritmo varia de acordo com o tamanho (N) do problema.
 
 
